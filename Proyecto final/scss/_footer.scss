@@ -1,0 +1,50 @@
+
+
+
+ 
+@mixin footer-background($color) {
+    background-color: $color;
+  }
+  
+  .footer {
+  
+    @include footer-background(#f8f8f8);
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  
+    &__container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+    &__column {
+      width: 23%;
+    }
+  
+    &__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #333;
+    }
+  
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+  
+    &__list-item {
+      margin-bottom: 10px;
+    }
+  
+    &__link {
+      color: #666;
+      text-decoration: none;
+      display: inline-flex;
+    }
+  }
+  

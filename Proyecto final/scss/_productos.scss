@@ -1,0 +1,80 @@
+
+$product-hover-color: #f8f9fa;
+$primary-color: #007bff;
+
+.products {
+  &__container {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+  }
+}
+
+.producto {
+  &__img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    background-color: $product-hover-color;
+    .producto__img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.card {
+  &.producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+
+    &:hover {
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-bottom: 1.5rem;
+  }
+
+  .producto {
+    &__titulo {
+      font-size: 1.25rem;
+      font-weight: bold;
+      min-height: 2.5rem;
+    }
+
+    &__precio {
+      font-size: 1.1rem;
+      color: $primary-color;
+      font-weight: bold;
+      margin-bottom: auto;
+    }
+
+    &__add-to-cart {
+      background-color: $primary-color;
+      border: none;
+      transition: background-color 0.3s;
+      margin-top: 1rem;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}
