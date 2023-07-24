@@ -1,0 +1,27 @@
+[
+    {
+        "ciudad": "Amsterdam",
+        "tarifa": 500000
+    },
+    {
+        "ciudad": "Barcelona",
+        "tarifa": 450000 
+    },
+    {
+        "ciudad": "Berlin",
+        "tarifa": 600000 
+    },
+    {
+        "ciudad": "Roma",
+        "tarifa": 400000 
+    },
+    {
+        "ciudad": "Londres",
+        "tarifa": 700000 
+    },
+    {
+        "ciudad": "Paris",
+        "tarifa": 600000 
+    }
+
+] 

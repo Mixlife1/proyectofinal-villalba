@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./assets/img-inicio/Europa.ico" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.28.0/build/global/luxon.min.js"></script>
+    <title>JavaScript</title>
+</head>
+<header>
+    <div class="logo-container">
+        <img src="assets\img-inicio\Europe_on_the_globe_(red).svg.png" alt="Europa">
+    </div>
+    <div>
+        <h1 class="titulo">Trabajo Final JavaScript - CoderHouse 2023</h1>
+    </div>
+</header>
+<body>
+
+    <div class="modo-oscuro">
+        <label for="slider">Cambiar modo</label>
+        <input type="range" id="slider" min="0" max="1" step="1">
+    </div>
+
+    <section class="color_letra">
+        <p class="alinear"> Cotizador de pasajes: </p>
+        <p class="centrado"> (*) Los precios base consideran una estadia superior a 28 dias.
+    </section>
+
+    <div id="resultado"></div>
+
+    <div>
+        <form id="psw">
+            <label for="password" class="color_letra">Ingrese su contraseña: </label>
+            <input type="password" id="password" name="password" placeholder="PSW">
+            <button type="submit">Ingresar</button>
+        </form>
+        <div id="mensaje"></div>
+    </div>
+
+    <br>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-item"><img src="assets/img-inicio/Amsterdam1.jpg" alt="Foto 1"></div>
+            <div class="carousel-item"><img src="assets/img-inicio/barcelona2.jpg" alt="Foto 2"></div>
+            <div class="carousel-item"><img src="assets/img-inicio/Berlin.jpg" alt="Foto 3"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\roma2.jpg" alt="Foto 4"></div>
+            <div class="carousel-item"><img src="assets/img-inicio/londres5.webp" alt="Foto 5"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\Londres.jpg" alt="Foto 6"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\londres2.jpg" alt="Foto 7"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\londres3.jpg" alt="Foto 8"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\Paris.webp" alt="Foto 9"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\roma3.jpg" alt="Foto 10"></div>
+            <div class="carousel-item"><img src="assets\img-inicio\paris2.jpg" alt="Foto 11"></div>
+        </div>
+        <div class="carousel-nav">
+            <button class="carousel-nav-button prev">Anterior</button>
+            <button class="carousel-nav-button next">Siguiente</button>
+        </div>
+    </div>
+    <form>
+        <label for="ciudad">Ciudad:</label>
+        <div id="ciudades">
+            <p class="letraChica alinear_destino">Seleccione la ciudad: </p>
+        </div>
+        <label for="nombre" class="usuario">Usuario:</label>
+        <input type="text" id="usuario" placeholder="Ingrese su nombre" required>
+        <input type="file" id="foto" accept="image/*">
+        <label for="pasajeros" class="pasajeros">Cantidad de pasajeros:</label>
+        <input type="number" id="pasajeros" value="1" min="1">
+        <label for="dias" class="diasDeEstancia">Cantidad de días de estancia:</label>
+        <input type="number" id="dias" value="1" min="1">
+        <button type="button" id="agregar">Agregar</button>
+        <button type="button" id="resetear">Vaciar Carrito</button>
+        <button type="button" id="comprar">Comprar Carrito</button>
+    </form>
+
+    <div id="carrito"></div>
+
+    <br>
+
+    <p>
+        <span class="textoLogin">Europa</span> es un continente ubicado enteramente en el hemisferio norte y
+        mayoritariamente en el hemisferio oriental. Las fronteras de Europa están situadas en la mitad
+        occidental del hemisferio norte, limitada por el océano Ártico en el norte, hasta el mar Mediterráneo
+        por el sur. Por el oeste, llega hasta el océano Atlántico.
+        <span id="esconderTexto" class="esconderTexto">
+            Por el este, limita con Asia, de la que la separan los montes Urales, el río Ural, el mar Caspio, la
+            cordillera del Cáucaso, el mar Negro y los estrechos del Bósforo y de los Dardanelos. Europa es uno
+            de los continentes que conforman el supercontinente euroasiático, situado entre los paralelos 35º
+            30’ y 70º 30’ de latitud norte.​
+            <br>
+            Europa es el segundo continente más pequeño en términos de superficie. Abarca 10 530 751 kilómetros
+            cuadrados o el 2 % de la superficie del mundo y alrededor de 6,8 % del total de las tierras
+            emergidas. Alberga un gran número de estados soberanos, cuyo número exacto depende de la definición
+            de la frontera de Europa, así como de la exclusión o inclusión de estados parcialmente reconocidos.
+            De todos los países europeos, Rusia es el mayor en superficie (al mismo tiempo que es el estado
+            soberano reconocido internacionalmente más extenso del mundo), mientras que la Ciudad del Vaticano
+            es el más pequeño (al mismo tiempo que es el estado soberano e internacionalmente reconocido más
+            pequeño del mundo). Europa es el cuarto continente más poblado después de Asia, África y América,
+            con una población de 740 813 959 (año 2015) o alrededor del 10,03 % de la población mundial.​
+            <br>
+            Europa, en particular la Antigua Grecia, es la cuna de la cultura occidental. La caída del Imperio
+            romano de Occidente, durante el período de la migración, marcó el fin de la Edad Antigua y el
+            comienzo de una era conocida como la Edad Media.
+            <br>
+            El Renacimiento con sus consiguientes humanismo, arte y ciencia, además de la exploración llevaron
+            al "viejo continente", y finalmente al resto del mundo, a la Edad Moderna. A partir de este período
+            las naciones europeas desempeñan un papel preponderante en los asuntos mundiales, desde el siglo xvi
+            en adelante especialmente, después del comienzo de la colonización. En los siglos xvii y xviii, las
+            naciones europeas controlaron la mayor parte de África, América, y gran parte de Asia, y
+            posteriormente también Oceanía.
+            <br>
+            La Revolución Industrial, que comenzó en el Reino Unido en el siglo xviii, dio lugar a un cambio
+            radical en los ámbitos económico, cultural y social en Europa Occidental, y posteriormente en el
+            resto del mundo. La Primera Guerra Mundial y la Segunda Guerra Mundial condujeron a una disminución
+            en el dominio de Europa en los asuntos mundiales cuando los Estados Unidos y la Unión Soviética
+            tomaron la preeminencia.
+            <br>
+            La Guerra Fría entre las dos superpotencias dividió Europa a lo largo del Telón de Acero. La
+            integración europea dio lugar a la formación del Consejo de Europa y la Unión Europea en Europa
+            occidental, las cuales se han expandido hacia el este desde la caída de la Unión Soviética en 1991.
+            <br>
+            Actualmente, naciones que ejercen poder hegemónico mundial como Estados Unidos son el resultado de
+            la colonización europea.
+        </span>
+    </p>
+    <button class="botonLeerMas" id="botonLeerMas">Leer Mas</button>
+
+    <br>
+
+    <section class="alinear_destino">
+        <button type="button" id="submitBtn">Ir a Galeria de fotos</button>
+    </section>
+
+    <br>
+
+    <h2 class="alinear_destino">Temperatura de ciudades:</h2>
+
+    <br>
+
+    <div id="temperatura" class="container-con-margen"></div>
+
+    <br>
+
+    <br>
+    <div class="campoInput">
+        <h2 class="alinear_destino">Destinos:</h2>
+        <section class="contenido">
+            <div>
+                <img src="assets/img-inicio/Amsterdam1.jpg" alt="Amsterdam" class="widget1__img imagen-atractiva"
+                    id="img-amsterdam">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$500.000 (*)</span>
+                <br>
+                <span class="ciudad">AMSTERDAM</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+
+            </div>
+            <div>
+                <img src="assets/img-inicio/barcelona2.jpg" alt="Barcelona" class="widget1__img imagen-atractiva"
+                    id="img-barcelona">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$450.000 (*)</span>
+                <br>
+                <span class="ciudad">BARCELONA</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+            </div>
+            <div>
+                <img src="assets/img-inicio/Berlin.jpg" alt="Berlin" class="widget1__img imagen-atractiva"
+                    id="img-berlin">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$600.000 (*)</span>
+                <br>
+                <span class="ciudad">BERLIN</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+            </div>
+            <div>
+                <img src="assets/img-inicio/Roma.jpg" alt="Roma" class="widget1__img imagen-atractiva" id="img-roma">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$400.000 (*)</span>
+                <br>
+                <span class="ciudad">ROMA</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+            </div>
+            <div>
+                <img src="assets/img-inicio/londres5.webp" alt="Londres" class="widget1__img imagen-atractiva"
+                    id="img-londres">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$700.000 (*)</span>
+                <br>
+                <span class="ciudad">LONDRES</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+            </div>
+            <div>
+                <img src="assets/img-inicio/paris3.jpg" alt="Paris" class="widget1__img imagen-atractiva"
+                    id="img-paris">
+                <br>
+                <br>
+                <span class="preciodesde">Precios desde AR$600.000 (*)</span>
+                <br>
+                <span class="ciudad">PARIS</span>
+                <br>
+                <span class="increm">10% incremento por cada 7 dias menos de estadia</span>
+                <h5 class="description" style="color: rgb(133, 202, 43);">Salidas a partir del 1ro de Marzo de 2023</h5>
+            </div>
+        </section>
+    </div>
+
+    <script src="./js/carrousel.js"></script>
+    <script src="./js/generacionPsw.js"></script>
+    <script src="./js/leerMas.js"></script>
+    <script src="./js/modoOscuro.js"></script>
+    <script src="./js/scriptPrincipal.js"></script>
+    <script src="./js/mensajeBienvenida.js"></script>
+    <script src="./js/redirVideos.js"></script>
+    <script src="./js/temperaturaApi.js"></script>
+
+</body>
+<footer>
+    <div class="footer-content">
+        <div class="footer-text">
+            <h5 class="links">Copyright © 2023 - Edgar Villalba</h5>
+            <h5 class="links">All rights reserved</h5>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.google.com/intl/es-419/gmail/about/#inbox" target="_blank"><img src="assets/img-inicio/bx-mail-send.png" alt="email" width="30" class="imagen-atractiva"></a>
+            <a href="https://es-la.facebook.com/" target="_blank"><img src="assets/img-inicio/bxl-facebook-circle.png" alt="facebook" width="30" class="imagen-atractiva"></a>
+            <a href="https://github.com/" target="_blank"><img src="assets/img-inicio/bxl-github.png" alt="github" width="30" class="imagen-atractiva"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="assets/img-inicio/bxl-instagram.png" alt="instagram" width="30" class="imagen-atractiva"></a>
+            <a href="https://www.tiktok.com/es/" target="_blank"><img src="assets/img-inicio/bxl-tiktok.png" alt="tiktok" width="30" class="imagen-atractiva"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="assets/img-inicio/bxl-twitter.png" alt="twitter" width="30" class="imagen-atractiva"></a>
+        </div>
+    </div>
+</footer>
+</html>
